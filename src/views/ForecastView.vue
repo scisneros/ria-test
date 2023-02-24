@@ -26,8 +26,8 @@ export default {
 <style scoped>
 .forecast-container {
     padding: 16px;
-    background: rgb(218, 206, 194);
-    background: linear-gradient(0deg, #dacec2 19%, #06a9c4 20%, #005c8d 100%);
+    background: linear-gradient(0deg, #dacec2 19%, #06a9c4 20%, #005c8d 100%); /* Could be an image */
+    height: calc(100vh - 64px - 48px); /* Hardcoded navbar and tab height */
 }
 </style>
 
