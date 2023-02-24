@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 
 import './assets/main.css'
+import customTheme from './theme'
 
 // Vuetify
 import 'vuetify/styles'
@@ -12,7 +13,13 @@ import * as directives from 'vuetify/directives'
 
 const vuetify = createVuetify({
   components,
-  directives
+  directives,
+  theme: {
+    defaultTheme: 'customTheme',
+    themes: {
+      customTheme,
+    }
+  }
 })
 
 const app = createApp(App)
