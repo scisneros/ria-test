@@ -22,3 +22,11 @@ export default {
         <NextHoursForecast :forecastData="exampleResponse.list" />
     </div>
 </template>
+
+<style scoped>
+.forecast-container {
+    padding: 16px;
+    background: rgb(218, 206, 194);
+    background: linear-gradient(0deg, #dacec2 19%, #06a9c4 20%, #005c8d 100%);
+}
+</style>
