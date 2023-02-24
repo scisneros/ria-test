@@ -20,4 +20,4 @@ npm run dev
 By default, this will run on http://localhost:5173/. Index page will redirect to the first city available.
 
 ## Project sample screenshot
-![image](https://user-images.githubusercontent.com/22943973/221313940-de5ee1b4-e155-407d-9ac0-b50a23d11a97.png)
+![image](https://user-images.githubusercontent.com/22943973/221317270-d7864134-6527-4e2c-8d15-d0cbc2e5a18c.png)
