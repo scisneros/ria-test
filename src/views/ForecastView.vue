@@ -30,3 +30,9 @@ export default {
     background: linear-gradient(0deg, #dacec2 19%, #06a9c4 20%, #005c8d 100%);
 }
 </style>
+
+<style>
+.forecast-card-title {
+    border-bottom: 1px solid #EEE;
+}
+</style>
