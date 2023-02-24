@@ -18,7 +18,6 @@ export default {
 
 <template>
   <header>
-
     <div class="wrapper">
       <v-layout>
         <v-app-bar title="Simple Weather" color="primary" :elevation="2">
@@ -28,7 +27,12 @@ export default {
         </v-app-bar>
         <v-main>
           <v-tabs v-model="selectedTab">
-            <v-tab v-for="city in Object.keys(cities)" :key="city" :value="city" :to="`/city/${city}`">
+            <v-tab
+              v-for="city in Object.keys(cities)"
+              :key="city"
+              :value="city"
+              :to="`/city/${city}`"
+            >
               {{ cities[city].name }}
             </v-tab>
           </v-tabs>
