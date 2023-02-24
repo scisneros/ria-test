@@ -8,6 +8,8 @@ The required scope was achieved, except for the 5 days forecast, as at the time 
 
 Bonus tasks (city search) were not implemented.
 
+Total developing time was about 2:30hrs, not counting some breaks. I took a little more than expected because I was trying to workaround the API issue with local calculations based on available data, but ultimately decided it was not worth it.
+
 ## Running the project
 **(Node.js required)**
 
