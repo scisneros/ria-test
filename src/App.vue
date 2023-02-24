@@ -36,8 +36,19 @@ export default {
       </v-layout>
     </div>
   </header>
-
-  <RouterView />
+  <div class="main-container">
+    <v-container>
+      <RouterView />
+    </v-container>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.main-container {
+  /* Could be an image */
+  background: linear-gradient(0deg, #dacec2 19%, #06a9c4 20%, #005c8d 100%);
+  /* Hardcoded navbar and tab height */
+  height: calc(100vh - 64px - 48px);
+  overflow: auto;
+}
+</style>
