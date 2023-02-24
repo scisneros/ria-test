@@ -26,6 +26,8 @@ export default {
   },
   methods: {
     async fetchData(cityId) {
+      // Data is only fetched for hourly forecast.
+      // Daily forecast is not available for this API key at the moment.
       this.hourlyData = null
       const res = await fetch(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${cities[cityId].lat}&lon=${
