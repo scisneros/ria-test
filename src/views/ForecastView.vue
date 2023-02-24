@@ -1,6 +1,5 @@
 <script>
 import cities from '../data/cities.js'
-import exampleResponse from '../data/exampleResponse.js'
 import exampleResponseDaily from '../data/exampleResponseDaily.js'
 
 import NextHoursForecast from '../components/NextHoursForecast.vue'
@@ -13,9 +12,26 @@ export default {
     },
     data() {
         return {
-            cities: cities,
-            exampleResponse: exampleResponse,
+            hourlyData: [],
             exampleResponseDaily: exampleResponseDaily,
+        }
+    },
+    watch: {
+        "$route.params.nameId"(newCity) {
+            this.fetchData(newCity)
+        },
+    },
+    mounted() {
+        this.fetchData(this.$route.params.nameId)
+    },
+    methods: {
+        async fetchData(cityId) {
+            this.hourlyData = null
+            const res = await fetch(
+                `https://api.openweathermap.org/data/2.5/forecast?lat=${cities[cityId].lat}&lon=${cities[cityId].lon}&appid=${"78a07164952e030a671b9350f648cd70"}&units=metric`
+            )
+            let resJson = await res.json()
+            this.hourlyData = resJson.list
         }
     }
 }
@@ -23,7 +39,7 @@ export default {
 
 <template>
     <div class="forecast-container">
-        <NextHoursForecast :forecastData="exampleResponse.list" />
+        <NextHoursForecast :forecastData="hourlyData" />
         <NextDaysForecast :forecastData="exampleResponseDaily.list" />
     </div>
 </template>
@@ -31,8 +47,10 @@ export default {
 <style scoped>
 .forecast-container {
     padding: 16px;
-    background: linear-gradient(0deg, #dacec2 19%, #06a9c4 20%, #005c8d 100%); /* Could be an image */
-    height: calc(100vh - 64px - 48px); /* Hardcoded navbar and tab height */
+    background: linear-gradient(0deg, #dacec2 19%, #06a9c4 20%, #005c8d 100%);
+    /* Could be an image */
+    height: calc(100vh - 64px - 48px);
+    /* Hardcoded navbar and tab height */
     overflow: auto;
 }
 </style>
@@ -41,6 +59,7 @@ export default {
 .forecast-card {
     margin-bottom: 16px;
 }
+
 .forecast-card-title {
     border-bottom: 1px solid #EEE;
 }
