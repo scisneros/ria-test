@@ -1,35 +1,23 @@
-# ria-test
+# Ria Money Transfer - Test
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a job application test for the company Ria Money Transfer. It is currently public but will be made private after evaluation.
 
-## Recommended IDE Setup
+It is made using Vue.js, with Vuetify for styles.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+The required scope was achieved, except for the 5 days forecast, as at the time of developing the provided API key was not valid for the daily forecast API. Nonetheless, the frontend part was implemented, with those values hardcoded instead.
 
-## Customize configuration
+Bonus tasks (city search) were not implemented.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Running the project
+**(Node.js required)**
 
-## Project Setup
-
-```sh
-npm install
+Run the following commands:
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
+npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
+By default, this will run on http://localhost:5173/. Index page will redirect to the first city available.
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## Project sample screenshot
+![image](https://user-images.githubusercontent.com/22943973/221313940-de5ee1b4-e155-407d-9ac0-b50a23d11a97.png)
