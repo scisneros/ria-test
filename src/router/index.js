@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import ForecastView from '../views/ForecastView.vue'
+import cities from '../data/cities'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,7 +8,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      redirect: `/city/${Object.keys(cities)[0]}`
     },
     {
       path: '/city/:nameId',
