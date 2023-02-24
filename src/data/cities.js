@@ -1,17 +1,17 @@
 export default Object.freeze({
     'rio-de-jainero': {
         name: 'Rio de Jainero',
-        lat: -22.9140693,
-        lon: -43.5860654,
+        lat: -22.9068,
+        lon: -43.1729,
     },
     'beijing': {
         name: 'Beijing',
-        lat: 39.9385466,
-        lon: 116.1172824,
+        lat: 39.9388,
+        lon: 116.3974,
     },
     'los-angeles': {
         name: 'Los Angeles',
-        lat: 34.0201613,
-        lon: -118.6919114,
+        lat: 34.0522,
+        lon: -118.2437,
     }
 })
