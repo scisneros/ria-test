@@ -1,5 +1,6 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
+import cities from './data/cities.js'
 
 export default {
   components: {
@@ -9,9 +10,7 @@ export default {
   data() {
     return {
       selectedTab: null,
-      tabItems: [
-        'Rio de Janeiro', 'Beijing', 'Los Angeles'
-      ]
+      cities: cities
     }
   }
 }
@@ -29,8 +28,8 @@ export default {
         </v-app-bar>
         <v-main>
           <v-tabs v-model="selectedTab">
-            <v-tab v-for="item in tabItems" :key="item" :value="item">
-              {{ item }}
+            <v-tab v-for="city in Object.keys(cities)" :key="city" :value="city" :to="`/city/${city}`">
+              {{ cities[city].name }}
             </v-tab>
           </v-tabs>
         </v-main>
