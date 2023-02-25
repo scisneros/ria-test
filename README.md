@@ -2,7 +2,7 @@
 
 This project is a job application test for the company Ria Money Transfer. It is currently public but will be made private after evaluation.
 
-It is made using Vue.js, with Vuetify for styles.
+It is made using Vue.js, with Vuetify for styles. Design, though technically responsive, is completely mobile-oriented.
 
 The required scope was achieved, except for the 5 days forecast, as at the time of developing the provided API key was not valid for the daily forecast API. Nonetheless, the frontend part was implemented, with those values hardcoded instead. Also, hourly forecast was made on a 3-hour-basis, for the same reasons.
 
